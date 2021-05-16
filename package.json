@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "watch": "shadow-cljs watch app",
+    "compile": "shadow-cljs compile app",
+    "release": "shadow-cljs release app && cp assets/* out/dist/",
+    "html": "mkdir -p out/dev && cp assets/* out/dev/",
+    "serve": "yarn html && http-server out/dev/",
+    "clean": "rm -r out/dist/*",
+    "dev": "yarn html && yarn watch",
+    "repl": "shadow-cljs cljs-repl app",
+    "build": "yarn clean && yarn release"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.12.5"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  }
+}
